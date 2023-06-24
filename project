@@ -1,0 +1,24 @@
+class ProjectManagement:
+    def __init__(self):
+        self.projects = []
+
+    def create_project(self, name):
+        self.projects.append(name)
+        print(f"Project '{name}' created successfully.")
+
+    def view_projects(self):
+        if not self.projects:
+            print("No projects created.")
+        else:
+            print("Projects:")
+            for project in self.projects:
+                print(project)
+
+if __name__ == '__main__':
+    project_management = ProjectManagement()
+
+    project_management.create_project("Website Redesign")
+    project_management.create_project("Mobile App Development")
+    project_management.create_project("Marketing Campaign")
+
+    project_management.view_projects()
